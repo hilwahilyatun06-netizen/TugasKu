@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengumpulan Tugas — TugasKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header inner-header">
+    <div>
+      <a class="brand" href="index.html">TugasKu</a>
+      <div class="tagline">Portal Pengumpulan Tugas PAW — Pengembangan Aplikasi Web</div>
+    </div>
+    <nav>
+      <a class="back-btn" href="index.html">← Kembali ke Beranda</a>
+      <div class="tabs">
+        <a class="active" href="submit.html">Pengumpulan Tugas</a>
+        <a href="history.html">Riwayat Tugas</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="page-title">
+      <div class="eyebrow">✦ Pengumpulan Tugas</div>
+      <h1>Kumpulkan tugas dengan <em>mudah.</em></h1>
+      <p>Cukup isi judul tugas, lalu pilih cara pengumpulan yang sesuai.</p>
+    </section>
+
+    <form id="taskForm" class="form-card">
+      <label for="judul">Judul Tugas</label>
+      <input id="judul" name="judul" type="text" placeholder="Contoh: Tugas Pertemuan 1 — HTML Dasar" maxlength="150" required>
+
+      <label>Cara Pengumpulan</label>
+      <div class="method-grid">
+        <button type="button" class="method active" data-method="file">
+          <span>📄</span>
+          <strong>Upload File</strong>
+          <small>PDF, Word, atau ZIP</small>
+        </button>
+        <button type="button" class="method" data-method="link">
+          <span>🔗</span>
+          <strong>Link</strong>
+          <small>Google Drive atau tautan tugas</small>
+        </button>
+      </div>
+
+      <div id="fileArea">
+        <label>Pilih File Tugas</label>
+        <div class="file-picker">
+          <input id="file" type="file" accept=".pdf,.doc,.docx,.zip">
+          <label for="file" class="choose-file">Pilih File</label>
+          <span id="fileName">Tidak ada file yang dipilih</span>
+        </div>
+        <p class="hint">Format yang didukung: PDF, DOC, DOCX, ZIP. Maksimal 10 MB.</p>
+      </div>
+
+      <div id="linkArea" class="hidden">
+        <label for="link">Link Tugas</label>
+        <input id="link" type="url" placeholder="https://drive.google.com/..." maxlength="1000">
+        <p class="hint">Masukkan link Google Drive, GitHub, atau tautan tugas lainnya.</p>
+      </div>
+
+      <button class="primary-btn" type="submit">Kumpulkan Tugas →</button>
+      <div id="message" class="message"></div>
+    </form>
+  </main>
+
+  <footer>© 2026 TugasKu — Portal Pengumpulan Tugas PAW</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

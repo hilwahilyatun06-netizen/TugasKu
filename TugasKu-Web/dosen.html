@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dosen — TugasKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dosen">
+  <header class="site-header inner-header">
+    <div>
+      <a class="brand" href="index.html">TugasKu</a>
+      <div class="tagline">Portal Pengumpulan Tugas PAW — Pengembangan Aplikasi Web</div>
+    </div>
+    <nav>
+      <a class="back-btn" href="index.html">← Kembali ke Beranda</a>
+      <div class="profile-pill">
+        <span>H</span>
+        <div><strong>Hilwa Hilyatun Niswah</strong><small>Informatika · UINSGD Bandung</small></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page dosen-page">
+    <section class="page-title">
+      <div class="eyebrow">✦ Tugas Masuk</div>
+      <h1>Tugas yang <em>terkumpul.</em></h1>
+      <p>Pantau seluruh tugas yang dikumpulkan mahasiswa, lalu unduh untuk diperiksa.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat active">
+        <span class="stat-icon">📚</span>
+        <strong id="total">0</strong>
+        <span>Tugas Terkumpul</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">📄</span>
+        <strong id="files">0</strong>
+        <span>Berupa File</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">🔗</span>
+        <strong id="links">0</strong>
+        <span>Berupa Link</span>
+      </div>
+    </section>
+
+    <section class="table-card history-card">
+      <div class="card-heading">
+        <div>
+          <span class="card-kicker">KOTAK MASUK DOSEN</span>
+          <h2>Daftar tugas mahasiswa</h2>
+        </div>
+        <span class="readonly-label">👁 Hanya lihat & unduh</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Tugas</th>
+              <th>Waktu Kumpul</th>
+              <th>Tipe</th>
+              <th>File / Link</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="dosenBody"></tbody>
+        </table>
+      </div>
+      <div id="emptyDosen" class="empty-state">
+        <div>📬</div>
+        <h3>Belum ada tugas masuk</h3>
+        <p>Tugas mahasiswa yang dikumpulkan akan muncul di sini.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 TugasKu — Portal Pengumpulan Tugas PAW</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

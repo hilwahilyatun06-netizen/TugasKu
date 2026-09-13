@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Tugas — TugasKu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="history">
+  <header class="site-header inner-header">
+    <div>
+      <a class="brand" href="index.html">TugasKu</a>
+      <div class="tagline">Portal Pengumpulan Tugas PAW — Pengembangan Aplikasi Web</div>
+    </div>
+    <nav>
+      <a class="back-btn" href="index.html">← Kembali ke Beranda</a>
+      <div class="tabs">
+        <a href="submit.html">Pengumpulan Tugas</a>
+        <a class="active" href="history.html">Riwayat Tugas</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page history-page">
+    <section class="page-title history-title">
+      <div class="eyebrow">✦ Riwayat Pengumpulan</div>
+      <h1>Riwayat <em>tugas saya.</em></h1>
+      <p>Semua tugas yang telah kamu kumpulkan tersimpan rapi dan bisa kamu buka kembali kapan saja.</p>
+    </section>
+
+    <section class="stats history-stats">
+      <div class="stat active">
+        <span class="stat-icon">📚</span>
+        <strong id="historyTotal">0</strong>
+        <span>Total Tugas</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">📄</span>
+        <strong id="historyFiles">0</strong>
+        <span>File Terkumpul</span>
+      </div>
+      <div class="stat">
+        <span class="stat-icon">🔗</span>
+        <strong id="historyLinks">0</strong>
+        <span>Link Terkumpul</span>
+      </div>
+    </section>
+
+    <section class="table-card history-card">
+      <div class="card-heading">
+        <div>
+          <span class="card-kicker">ARSIP TUGAS</span>
+          <h2>Daftar pengumpulan</h2>
+        </div>
+        <a class="heading-action" href="submit.html">+ Kumpulkan Tugas</a>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Judul Tugas</th>
+              <th>Waktu Kumpul</th>
+              <th>Tipe</th>
+              <th>File / Link</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+      <div id="emptyHistory" class="empty-state">
+        <div>📂</div>
+        <h3>Belum ada tugas</h3>
+        <p>Tugas yang kamu kumpulkan nanti akan muncul di sini.</p>
+        <a href="submit.html" class="empty-action">Kumpulkan tugas pertama →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 TugasKu — Portal Pengumpulan Tugas PAW</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
